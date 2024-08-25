@@ -1,11 +1,7 @@
+
 const clock = document.querySelector("#clock");
 
 clock.innerText = "00:00:00";
-
-function sayHello()
-{
-    console.log("hello");
-}
 
 function getClock()
 {
@@ -18,4 +14,5 @@ function getClock()
 }
 
 setInterval(getClock, 1000);
+
 

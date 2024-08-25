@@ -18,14 +18,15 @@ function handleTodoSubmit(event){
 
 function printToDos(newTodo)
 {    
-    let newItem = document.createElement("il");
+    let newItem = document.createElement("li");
     let newspan = document.createElement("span");
     let delBUtton = document.createElement("button");
     newItem.appendChild(newspan);
     newItem.appendChild(delBUtton);
     delBUtton.innerText = "X";
+    delBUtton.style.margin = 2;
     delBUtton.addEventListener( "click", delButton);
-    newspan.innerText = newTodo.text;
+    newspan.innerText = newTodo.text + "  ";
     newspan.id = newTodo.id;
     todoList.appendChild(newItem);
     toDos.push(newTodo);

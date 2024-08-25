@@ -1,5 +1,5 @@
-const weather_location = document.querySelector("#weather span:first-child");
-const weather_current = document.querySelector("#weather span:last-child");
+const weather_location = document.querySelector("#weather span:last-child");
+const weather_current = document.querySelector("#weather span:first-child");
 
 navigator.geolocation.getCurrentPosition(onGeoSuccess, onGeoError);
 const WeatherAPIKey = "445522a2f8134422839163518241808";
@@ -29,12 +29,9 @@ function onGeoData(Data)
 {    
     console.log(Data);
     const myData = Data;
-    let myLocation = 
-    `Country : ${myData.location.country}`;
-    let myCurrent =
-    `Temp : ${myData.current.temp_c}℃, Condition : ${myData.current.condition.text}`;
-    let myIcon =
-    `Icon : ${myData.current.condition.icon}`;
+    let myLocation = `${myData.location.country}`;
+    let myCurrent = `${myData.current.temp_c}℃ `;
+    let myIcon =    `Icon : ${myData.current.condition.icon}`;
     console.log(myLocation);
     console.log(myCurrent);
     console.log(myIcon);
