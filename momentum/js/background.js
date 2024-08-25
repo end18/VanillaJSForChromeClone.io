@@ -1,4 +1,11 @@
-import bgImageListJSON from './img.json' with  { type: `json` };
+//const bgImageListJSON = JSON.parse(document.querySelector('#myJson').textContent);
+import bgImageListJSON from 'img.json' with  { type: `json` };
+/*
+const bgImageListJSON = fetch('./img.json')
+                        .then(response => response.json())
+                        .then(data => console.log(data))
+                        .catch(error => console.log(error));
+*/
 /*
 const images =
 [
